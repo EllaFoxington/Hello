@@ -1,231 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Music Recommendation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif;
-      color: #3a2f2f;
-      min-height: 100%;
-    }
-
-    body {
-      background-image: url('Spotify Background.jpg');
-      background-size: cover;
-      background-position: center;
-      margin: 40px;
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    /* Spinning Vinyl Disc */
-    .vinyl {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, #1a1a1a 40%, #0d0d0d 100%);
-      border-radius: 50%;
-      box-shadow: inset 0 0 50px rgba(255,255,255,0.05), 0 0 20px rgba(0,0,0,0.4);
-      transform: translate(-50%, -50%);
-      animation: spin 40s linear infinite;
-      z-index: 0;
-      opacity: 0.15;
-      pointer-events: none;
-    }
-
-    @keyframes spin {
-      0% { transform: translate(-50%, -50%) rotate(0deg); }
-      100% { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    .form-container {
-      background-color: rgba(245, 238, 220, 0.95);
-      padding: 35px;
-      border-radius: 16px;
-      width: 500px;
-      margin: auto;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      border: 2px solid #bfae88;
-      font-family: 'Roboto Slab', serif;
-      position: relative;
-      z-index: 1;
-    }
-
-    h2 {
-      text-align: center;
-      color: #2e1f1f;
-      font-family: 'Roboto Slab', serif;
-      text-shadow: 1px 1px 0 #c9b08c;
-      margin-bottom: 30px;
-    }
-
-    label {
-      display: block;
-      font-weight: 600;
-      margin-top: 15px;
-      margin-bottom: 5px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #bfae88;
-      border-radius: 6px;
-      box-sizing: border-box;
-      background-color: #fdf6f0;
-      font-family: 'Montserrat', sans-serif;
-      color: #3a2f2f;
-      font-size: 14px;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 5px 0 15px 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    ul li {
-      display: flex;
-      align-items: center;
-    }
-
-    ul li label {
-      margin-left: 5px;
-      cursor: pointer;
-      font-weight: normal;
-    }
-
-    button {
-      margin-top: 25px;
-      background-color: #8b5e3c;
-      color: #fff8f0;
-      padding: 12px;
-      width: 100%;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: 'Montserrat', sans-serif;
-      transition: 0.3s;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    button:hover {
-      background-color: #5d3a21;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Student Portfolio</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" alt="Student Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#works">My Works</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <div class="vinyl"></div>
+    <section class="hero">
+        <img src="icon.png" alt="Profile Picture" class="profile-pic">
+        <h1>Hello, I'm <span class="highlight">Mikaela Burac</span></h1>
+        <p>Dreaming to be Architect</p>
+    </section>
 
-  <div class="form-container">
-    <h2>Music Recommendation</h2>
-    <form>
-      <!-- Input Fields -->
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" placeholder="Alfonso Beverly" required>
+    <section id="about">
+        <h2>What's up about me?</h2>
+        <p>Hallo friends, I am Mikaela Burac a young student dreaming hard to become either an architect or engineer.</p>
+    
+    <img src="Love.jpg" alt="D:\mika school\gr.9\ICT\1st Q">    
 
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" placeholder="AlfonsoRichardBeverly@gmail.com" required>
+    <section id="works">
+        <h2>My Works</h2>
+        <div class="works-gallery">
+            <div class="work-item">
+                <a href="I AM SO TIRED.jpg" target="missing">
+                    <img src="Work1.png" alt="Sample Work">
+                </a>
+                <p>My Personal Art</p>
+            </div>
 
-      <label for="music">Recommended Music Title:</label>
-      <input type="text" id="music" name="music" required>
+            <div class="work-item">
+                <a href="I love sans.jpg" target="missing">
+                    <img src="Work2.png" alt="Sample Work">
+                </a>
+                <p>My Top 3 Best Movies</p>
+            </div>
+        </div>
+    </section>
 
-      <label for="reason">Why do you recommend it?</label>
-      <textarea id="reason" name="reason" rows="4" placeholder="feedback here..." required></textarea>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Mikaela Burac" required>
 
-      <!-- Checkbox: Genres -->
-      <label>Genres (select all that apply):</label>
-      <ul>
-        <li>
-          <input type="checkbox" id="pop" name="genre" value="pop">
-          <label for="pop">Pop Music</label>
-        </li>
-        <li>
-          <input type="checkbox" id="kpop" name="genre" value="kpop">
-          <label for="kpop">Kpop</label>
-        </li>
-        <li>
-          <input type="checkbox" id="jazz" name="genre" value="jazz">
-          <label for="jazz">Jazz</label>
-        </li>
-        <li>
-          <input type="checkbox" id="rock" name="genre" value="rock">
-          <label for="rock">Rock</label>
-        </li>
-        <li>
-          <input type="checkbox" id="classical" name="genre" value="classical">
-          <label for="classical">Classical</label>
-        </li>
-      </ul>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" placeholder="Zentoro.Loreo@gmail.com" required>
 
-      <!-- Radio: Rating -->
-      <label>Rate the Music:</label>
-      <ul>
-        <li>
-          <input type="radio" id="rate1" name="rating" value="1" required>
-          <label for="rate1">1</label>
-        </li>
-        <li>
-          <input type="radio" id="rate2" name="rating" value="2">
-          <label for="rate2">2</label>
-        </li>
-        <li>
-          <input type="radio" id="rate3" name="rating" value="3">
-          <label for="rate3">3</label>
-        </li>
-        <li>
-          <input type="radio" id="rate4" name="rating" value="4">
-          <label for="rate4">4</label>
-        </li>
-        <li>
-          <input type="radio" id="rate5" name="rating" value="5">
-          <label for="rate5">5 (Best)</label>
-        </li>
-      </ul>
+            <label for="platform">Rate my Portfolio:</label>
+            <select id="platform" required>
+                <option value="">-- Select Rating --</option>
+                <option value="1"> I </option>
+                <option value="2"> II</option>
+                <option value="3"> III</option>
+                <option value="4"> IIII</option>
+                <option value="5"> V</option>
+            </select>
 
-      <!-- Platform -->
-      <label>Where did you stream it?</label>
-      <ul>
-        <li>
-          <input type="radio" id="spotify" name="platform" value="Spotify" required>
-          <label for="spotify">Spotify</label>
-        </li>
-        <li>
-          <input type="radio" id="youtube" name="platform" value="YouTube Music">
-          <label for="youtube">YouTube Music</label>
-        </li>
-        <li>
-          <input type="radio" id="apple" name="platform" value="Apple Music">
-          <label for="apple">Apple Music</label>
-        </li>
-        <li>
-          <input type="radio" id="soundcloud" name="platform" value="SoundCloud">
-          <label for="soundcloud">SoundCloud</label>
-        </li>
-      </ul>
+            <label for="reason">Any Feedback?</label>
+            <textarea id="reason" rows="4" placeholder="feedback here..." required></textarea>
 
-      <!-- Submit -->
-      <button type="submit">Submit Recommendation</button>
-    </form>
-  </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
+    <footer>
+        <p>&copy; 2025 Mikaela Student. All colonizer rights reserved.</p>
+    </footer>
 </body>
 </html>
